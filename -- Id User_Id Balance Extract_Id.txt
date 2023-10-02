@@ -1,0 +1,11 @@
+-- Id User_Id Balance Extract_Id
+
+create table Account(
+    Id int not null,
+    User_Id int not null,
+    Balance DECIMAL,
+    Extract_Id int not null,
+    FOREIGN KEY(User_Id) REFERENCES Client(Id),
+    FOREIGN KEY(Extract_Id) REFERENCES Extract(Id),
+    PRIMARY KEY(Id,User_Id,Extract_Id) 
+);
