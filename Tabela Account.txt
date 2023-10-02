@@ -1,5 +1,16 @@
 -- Id User_Id Balance Extract_Id
 
+Create table Client(
+    Id int PRIMARY KEY NOT NULL, 
+    Name VARCHAR(20) NOT NULL,
+    Email VARCHAR(50) NOT NULL,
+    Password VARCHAR(20) NOT NULL
+);
+Create TABLE Extract(
+    Id int PRIMARY KEY NOT NULL,
+    Historic float not NULL
+);
+
 create table Account(
     Id int not null,
     User_Id int not null,
@@ -9,3 +20,4 @@ create table Account(
     FOREIGN KEY(Extract_Id) REFERENCES Extract(Id),
     PRIMARY KEY(Id,User_Id,Extract_Id) 
 );
+
