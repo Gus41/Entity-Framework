@@ -1,6 +1,7 @@
 ﻿using MyBank.EF.Context;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,17 +58,30 @@ namespace MyBank.Actions
             Console.WriteLine("Digite o valor que deseja depositar");
             string s_value = Console.ReadLine();
 
-            float value = float.Parse(s_value ?? "0");
+            decimal value = decimal.Parse(s_value ?? "0");
 
             if (value < 0)
             {
                 throw new Exception("Valor inválido");
             }
-            float saldo = 0;
 
-            float valorAtualizado = contexto.Account.Find(cod).Balance + value;
-            contexto.Account.Find(cod).Balance = valorAtualizado;
+            decimal? valor = 0;
+            foreach (var a in contexto.Account)
+            {
+                if (a.User_Id == cod)
+                {
+                    valor = a.Balance + value;
+                    a.Balance = valor;
+                    break;
+                }
+            }
 
+
+            Console.WriteLine(value + " Depositados!");
+
+            contexto.SaveChanges();
+            Console.WriteLine("Saldo: " + valor);
         }
     }
+    
 }

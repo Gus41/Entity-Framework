@@ -41,7 +41,7 @@ namespace MyBank.Actions
             flag = false;
             foreach (var c in contexto.Client)
             {
-                if (c.Password.Equals(s_pass))
+                if (c.Password.Equals(s_pass) && c.Id == cod)
                 {
                     flag = true;
                     break;
@@ -53,9 +53,9 @@ namespace MyBank.Actions
             }
 
             Console.WriteLine("Digite o valor que deseja sacar: ");
-            string s_value = Console.ReadLine();
+            string? s_value = Console.ReadLine();
             
-            Decimal value = Decimal.Parse(s_value ?? "0");
+            decimal? value = decimal.Parse(s_value ?? "0");
 
             if(value < 0)
             {

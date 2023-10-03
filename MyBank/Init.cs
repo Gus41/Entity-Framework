@@ -33,7 +33,9 @@ namespace MyBank
                 }
                 else if (n == 4)
                 {
-
+                    Console.WriteLine(".............");
+                    ActionDeposit deposito = new ActionDeposit();
+                    deposito.run();
                 }
                 else if (n == 5)
                 {
