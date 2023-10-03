@@ -57,8 +57,8 @@ namespace MyBank.Actions
                 ActionextractIn CriaExtrato = new ActionextractIn();
                 CriaExtrato.run();
                 int Id_Extrato = CriaExtrato.GetId();
-                float balance_FLOAT = 100;
-                context.Account.Add(new EF.Models.Account {Balance = balance_FLOAT, Id = n, User_Id = cod, Extract_Id = Id_Extrato});
+                decimal balance_DECIMAL = 100;
+                context.Account.Add(new EF.Models.Account {Balance = balance_DECIMAL, Id = n, User_Id = cod, Extract_Id = Id_Extrato});
                 context.SaveChanges();
             }
         }

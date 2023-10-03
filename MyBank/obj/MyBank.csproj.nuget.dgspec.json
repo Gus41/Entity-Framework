@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\clint\\OneDrive\\Desktop\\JAVA\\Entity-Framework\\MyBank\\MyBank.csproj": {}
+    "C:\\Users\\clint\\source\\repos\\MyBank\\MyBank.csproj": {}
   },
   "projects": {
-    "c:\\Users\\clint\\OneDrive\\Desktop\\JAVA\\Entity-Framework\\MyBank\\MyBank.csproj": {
+    "C:\\Users\\clint\\source\\repos\\MyBank\\MyBank.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\clint\\OneDrive\\Desktop\\JAVA\\Entity-Framework\\MyBank\\MyBank.csproj",
+        "projectUniqueName": "C:\\Users\\clint\\source\\repos\\MyBank\\MyBank.csproj",
         "projectName": "MyBank",
-        "projectPath": "c:\\Users\\clint\\OneDrive\\Desktop\\JAVA\\Entity-Framework\\MyBank\\MyBank.csproj",
+        "projectPath": "C:\\Users\\clint\\source\\repos\\MyBank\\MyBank.csproj",
         "packagesPath": "C:\\Users\\clint\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\clint\\OneDrive\\Desktop\\JAVA\\Entity-Framework\\MyBank\\obj\\",
+        "outputPath": "C:\\Users\\clint\\source\\repos\\MyBank\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\clint\\AppData\\Roaming\\NuGet\\NuGet.Config",
